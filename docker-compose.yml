@@ -1,0 +1,26 @@
+# ==============================================================================
+# NetAlertX - Configuración Docker Compose para TrueNAS SCALE
+# Servidor: 192.168.3.4 | Pool: /mnt/Serranapool/APPS/netalertx
+# ==============================================================================
+
+services:
+  netalertx:
+    image: ghcr.io/jokob-sk/netalertx:latest
+    container_name: netalertx
+    restart: unless-stopped
+    # MODO HOST OBLIGATORIO:
+    # Necesario para escanear ARP, paquetes RAW y descubrir dispositivos MAC en la LAN
+    network_mode: "host"
+    environment:
+      - TZ=${TZ:-America/Asuncion}
+      - PORT=${PORT:-20211}
+      - SCAN_SUBNETS=${SCAN_SUBNETS:-192.168.3.0/24}
+      - LISTEN_ADDR=0.0.0.0
+    volumes:
+      - ./data:/data
+      - /etc/localtime:/etc/localtime:ro
+    cap_add:
+      - NET_ADMIN
+      - NET_RAW
+    tmpfs:
+      - /tmp:mode=1777

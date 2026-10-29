@@ -1,0 +1,202 @@
+/* ==========================================================================
+   Estilos: Diario de Estudio
+   Diseño limpio, moderno y totalmente responsivo
+   ========================================================================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background-color: #f4f6f9;
+  color: #1e293b;
+  line-height: 1.5;
+  padding: 20px 15px;
+}
+
+.container {
+  max-width: 540px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+header {
+  text-align: center;
+  padding: 10px 0;
+}
+
+header h1 {
+  font-size: 1.8rem;
+  color: #0f172a;
+  font-weight: 700;
+}
+
+header .subtitulo {
+  color: #64748b;
+  font-size: 0.95rem;
+  margin-top: 4px;
+}
+
+/* Tarjetas */
+.tarjeta {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 22px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e2e8f0;
+}
+
+.tarjeta h2 {
+  font-size: 1.2rem;
+  margin-bottom: 16px;
+  color: #0f172a;
+  font-weight: 600;
+}
+
+/* Tarjeta de Racha */
+.racha-card {
+  background: linear-gradient(135deg, #fff7ed 0%, #ffedd5 100%);
+  border: 1px solid #fed7aa;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.racha-icono {
+  font-size: 2.8rem;
+  line-height: 1;
+}
+
+.racha-contenido {
+  display: flex;
+  flex-direction: column;
+}
+
+.racha-titulo {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 700;
+  color: #c2410c;
+}
+
+.racha-contador {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #9a3412;
+  line-height: 1.1;
+}
+
+/* Formulario */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.campo {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #334155;
+}
+
+input {
+  padding: 12px 14px;
+  border: 1.5px solid #cbd5e1;
+  border-radius: 10px;
+  font-size: 1rem;
+  color: #0f172a;
+  background-color: #ffffff;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+input:focus {
+  border-color: #f97316;
+  box-shadow: 0 0 0 3px rgba(249, 115, 22, 0.15);
+}
+
+.btn-guardar {
+  background-color: #ea580c;
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  padding: 13px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 4px;
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+.btn-guardar:hover {
+  background-color: #c2410c;
+}
+
+.btn-guardar:active {
+  transform: scale(0.98);
+}
+
+/* Lista de Sesiones */
+.lista-sesiones {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.sesion-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 14px;
+  background: #f8fafc;
+  border-radius: 10px;
+  border: 1px solid #e2e8f0;
+}
+
+.sesion-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.sesion-tema {
+  font-weight: 600;
+  color: #0f172a;
+  font-size: 1rem;
+}
+
+.sesion-fecha {
+  font-size: 0.8rem;
+  color: #64748b;
+  margin-top: 2px;
+}
+
+.sesion-minutos {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #ea580c;
+  background: #fff7ed;
+  padding: 4px 10px;
+  border-radius: 20px;
+  border: 1px solid #ffedd5;
+  white-space: nowrap;
+}
+
+.mensaje-vacio {
+  text-align: center;
+  color: #94a3b8;
+  font-size: 0.95rem;
+  padding: 15px 0;
+}

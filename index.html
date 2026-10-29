@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Diario de Estudio</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Diario de Estudio</h1>
+      <p class="subtitulo">Registra tus sesiones y mantén tu constancia</p>
+    </header>
+
+    <!-- Tarjeta de Racha Actual -->
+    <section class="tarjeta racha-card">
+      <div class="racha-icono">🔥</div>
+      <div class="racha-contenido">
+        <span class="racha-titulo">Racha Actual</span>
+        <div class="racha-contador" id="rachaTexto">0 días</div>
+      </div>
+    </section>
+
+    <!-- Formulario para Registrar Sesión -->
+    <section class="tarjeta">
+      <h2>Registrar Sesión</h2>
+      <form id="formularioSesion">
+        <div class="campo">
+          <label for="fecha">Fecha</label>
+          <input type="date" id="fecha" required>
+        </div>
+
+        <div class="campo">
+          <label for="tema">Tema</label>
+          <input type="text" id="tema" placeholder="Ej. JavaScript, Redes, Matemáticas" required>
+        </div>
+
+        <div class="campo">
+          <label for="minutos">Minutos de estudio</label>
+          <input type="number" id="minutos" min="1" placeholder="Ej. 45" required>
+        </div>
+
+        <button type="submit" class="btn-guardar">Guardar Sesión</button>
+      </form>
+    </section>
+
+    <!-- Lista de Sesiones Realizadas -->
+    <section class="tarjeta">
+      <h2>Historial de Sesiones</h2>
+      <ul id="listaSesiones" class="lista-sesiones">
+        <!-- Se genera dinámicamente con JavaScript -->
+      </ul>
+      <p id="mensajeVacio" class="mensaje-vacio">Aún no has registrado ninguna sesión.</p>
+    </section>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
