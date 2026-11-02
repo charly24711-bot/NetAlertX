@@ -7,7 +7,7 @@ cazador_anomalias_*.log
 __pycache__/
 *.pyc
 
-# OS files
-Thumbs.db
-Desktop.ini
-.DS_Store
+# Independent Projects
+MedikQuest/
+galaga/
+wifi-pulse/
